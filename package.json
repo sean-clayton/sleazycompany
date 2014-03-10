@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "grunt": "^0.4.3",
-    "grunt-jade-handlebars": "^0.1.2"
+    "grunt-jade-handlebars": "^0.1.2",
+    "forever": "^0.10.11"
   }
 }
