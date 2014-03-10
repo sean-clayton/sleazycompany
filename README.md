@@ -2,7 +2,7 @@
 ## Source code for [sleazycompany.com](http://sleazycompany.com)
 
 ### Word of Caution
-This branch is currently ***UNSTABLE*** and is not guarunteed to work correctly. When this site hits 1.0, all development will be moved to the dev branch, and only *stable* and *working* code will live in this branch (master).
+This branch is currently ***UNSTABLE*** and is not guarunteed to work correctly. When this site hits 1.0, all development will be moved to the [dev branch](../dev), and only *stable* and *working* code will live in this branch (master).
 
 ### Prerequisites
 - [Node.js](http://nodejs.org)
