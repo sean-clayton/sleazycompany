@@ -11,7 +11,7 @@ html, body {
   box-shadow: none;
   padding: 0 0 0 0;
 
-  @media (max-width: 767px) {
+  @media (max-width: @screen-xs-max) {
     overflow: hidden;
     padding: 0 0 0 15px;
   }
@@ -138,22 +138,11 @@ article {
   }
 }
 
-.ks-editable-btn {
-  display: block;
-  opacity: 1;
-}
-
 .gallery-image {
-  float: none;
-  display: inline-block;
   padding: 0;
-  max-width: 256px;
-  margin: 0 0 .25em 0;
-  width: 256px;
-}
-
-.gallery-hero-image {
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
+  :hover {
+    position: relative;
+    z-index: 1000 !important;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+  }
 }
