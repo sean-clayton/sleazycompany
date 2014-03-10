@@ -1,0 +1,144 @@
+html, body {
+  height: 100%;
+  background-color: @body-bg;
+  background-image: @body-bg-img;
+  background-size: 150px 150px;
+  margin: 0;
+}
+
+.navbar-collapse {
+  border-top: none;
+  box-shadow: none;
+  padding: 0 0 0 0;
+
+  @media (max-width: 767px) {
+    overflow: hidden;
+    padding: 0 0 0 15px;
+  }
+}
+
+.nav {
+  li {
+    text-shadow: 0 1px 0 black;
+  }
+}
+
+.navbar-default .navbar-nav {
+  .active {
+    a:hover, a:focus {
+      background: @navbar-default-link-active-hover-bg;
+    }
+  }
+}
+
+.main-header {
+  padding: 30px 0 0 0;
+}
+
+#wrap {
+  @gradient-opacity-start: 0; // Decimal value eg. .25, 1, 0
+  @gradient-opacity-end: .75; // Decimal value eg. .25, 1, 0
+  background-image: -moz-radial-gradient(center, ellipse cover,  hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,@gradient-opacity-end) 100%);
+  background-image: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,hsla(0,0%,0%,0)), color-stop(100%,hsla(0,0%,0%,@gradient-opacity-end)));
+  background-image: -webkit-radial-gradient(center, ellipse cover,  hsla(0,0%,0%,0) 0%,hsla(0,0%,0%,@gradient-opacity-end) 100%);
+  background-image: -o-radial-gradient(center, ellipse cover,  hsla(0,0%,0%,0) 0%,hsla(0,0%,0%,@gradient-opacity-end) 100%);
+  background-image: -ms-radial-gradient(center, ellipse cover,  hsla(0,0%,0%,0) 0%,hsla(0,0%,0%,@gradient-opacity-end) 100%);
+  background-image: radial-gradient(ellipse at center,  hsla(0,0%,0%,0) 0%,hsla(0,0%,0%,@gradient-opacity-end) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#40000000',GradientType=1 );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 0 -(@footer-height) 0;
+  padding: 3em 0 @footer-height 0;
+}
+
+.jumbotron {
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0,0,0,1);
+  cursor: default;
+  background-image: @grid-pattern;
+  background-size: 50px 50px;
+
+  h1, h2 {
+    margin: 0 0 0 0;
+    text-transform: uppercase;
+  }
+  h2 {
+    font-size: 3em;
+  }
+  p.tagline {
+    font-family: @headings-font-family;
+    margin: 1em 0 0 0;
+  }
+}
+
+.main-footer {
+  background: rgba(0,0,0,.5);
+  height: @footer-height;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  border-top: 1px solid rgba(0,0,0,.75);
+  padding: @footer-padding 0 0 0;
+
+  .copyright-info {
+    color: #555;
+    text-align: center;
+    text-shadow: 0 1px 0 black;
+  }
+}
+
+.home-jumbo {
+  background-color: @home-jumbo-bg;
+}
+.downloads-jumbo {
+  background-color: @downloads-jumbo-bg;
+}
+.intel-jumbo {
+  background-color: @intel-jumbo-bg;
+}
+.post-jumbo {
+  img {
+    width: 100%;
+  }
+}
+
+article {
+  .post {
+    p {
+      font-size: 1.2em;
+      max-width: 1024px;
+      line-height: 1.75em;
+      margin: 0 auto 2em auto;
+    }
+    p[last-child] {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.post {
+  background: @gray-darker;
+  padding: 1em;
+  margin: 0 0 2em 0;
+  text-shadow: 0 1px 0 rgba(0,0,0,1);
+  -webkit-box-shadow: 0 3px 0 rgba(0,0,0,.15);
+  -moz-box-shadow: 0 3px 0 rgba(0,0,0,.15);
+  box-shadow: 0 3px 0 rgba(0,0,0,.15);
+
+  h2 {
+    margin: 0 0 0 0;
+  }
+
+  .lead {
+    font-size: 1em;
+  }
+}
+
+.ks-editable-btn {
+  display: block;
+  opacity: 1;
+}

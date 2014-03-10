@@ -1,0 +1,16 @@
+extends ../layouts/default
+
+block content
+	.container: .row: .col-sm-12
+		article
+			if !data.post
+				header
+					h2 Invalid Post.
+			else
+				header.jumbotron.post-jumbo
+					if data.post.image.exists
+						.image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
+					h2
+						= data.post.title
+				.post
+					!= data.post.content.full
