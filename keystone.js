@@ -10,24 +10,26 @@ var keystone = require('keystone');
 // and documentation.
 
 keystone.init({
-	
+
 	'name': 'Sleazy Company',
 	'brand': 'Sleazy Company',
-	
+
 	'less': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
-	
+
 	'views': 'templates/views',
 	'view engine': 'jade',
-	
+
 	'auto update': true,
-	
+
+	'port': 80,
+
 	'session': true,
 	'auth': true,
 	'user model': 'User',
 	'cookie secret': 'deD~$[:1d[[VrhP2gva+45^|_18,,tUH]T%#FmJh*to;FIwB"FeL;6?uHM|.KkEL'
-	
+
 });
 
 // Load your project's Models
