@@ -75,6 +75,13 @@ html, body {
   }
 }
 
+.main-content {
+  text-shadow: 0 1px 0 rgba(0,0,0,1);
+  padding: .5em 2em 2em 2em;
+  background-color: rgba(0,0,0,.5);
+  #gradient > .vertical(desaturate(darken(@green, 25%), 70%); desaturate(darken(@green, 30%), 70%));
+}
+
 .main-footer {
   background: rgba(0,0,0,.5);
   height: @footer-height;
@@ -186,5 +193,5 @@ article {
 
 .twitter-widget {
   display: inline-block;
-  height: 360px;
+  min-height: 360px;
 }
