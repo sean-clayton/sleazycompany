@@ -8,9 +8,10 @@ block content
 					h2 Invalid Post.
 			else
 				header.jumbotron.post-jumbo
-					if data.post.image.exists
-						.image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
 					h2
 						= data.post.title
+					if data.post.subtitle
+						h3
+							= data.post.subtitle
 				.post
 					!= data.post.content.full

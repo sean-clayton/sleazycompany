@@ -5,8 +5,6 @@ mixin post(post)
 		h2
 			a(href='/news/post/' + post.slug)
 				= post.title
-		if post.image.exists
-			img(src=post._.image.fit(160,160)).img.pull-right
 		p!= post.content.brief
 		if post.content.extended
 			p.read-more: a(href='/news/post/' + post.slug) Read more...
