@@ -1,8 +1,9 @@
 extends ../layouts/default
 
 block intro
-	.container: header.jumbotron.gallery-jumbo
-			h1 Media
+	.container: header.jumbotron.media-jumbo
+		h1 Media
+		p.tagline Images and Videos from Op Nights
 
 block content
 	.container
@@ -21,6 +22,6 @@ block content
 				.row.gallery-images
 					each image in gallery.images
 						.col-sm-6.col-md-3.gallery-image
-							a(href=image.url): img(src=image.thumbnail(768,768,{"jpg_with_quality": 10})).img-responsive
+							a(href=image.url): img(src=image.thumbnail(768,768)).img-responsive
 		else
 			h3.text-muted There are no image galleries yet.
