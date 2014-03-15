@@ -53,16 +53,14 @@ html
 									span.icon-bar
 									span.icon-bar
 							.collapse.navbar-collapse
-								ul.nav.navbar-nav
+								ul.nav.navbar-nav.navbar-left
 									each link in navLinks
 										li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
 								ul.nav.navbar-nav.navbar-right
 									if user
-										if user.canAccessKeystone
-											li: a(href='/keystone') Admin Panel
-										li: a(href='/keystone/signout') Sign Out
+										li: a(href='/keystone/signout',data-no-instant) Sign Out
 									else
-										li: a(href='/keystone/signin') Sign In
+										li: a(href='/keystone/signin',data-no-instant) Sign In
 
 			//- BODY
 			#body

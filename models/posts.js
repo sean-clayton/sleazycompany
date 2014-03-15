@@ -13,6 +13,9 @@ Post.add({
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	author: { type: Types.Relationship, ref: 'User', index: true },
 	publishedDate: { type: Types.Date, index: true },
+	mission: { type: String, index: true, label: 'Mission(s)' },
+	missionDateTime: { type: Date, default: Date.now, index: true },
+	etc: { type: Number, index: true, label: 'ETC' },
 	content: {
 		brief: { type: Types.Html, wysiwyg: true, height: 150 },
 		extended: { type: Types.Html, wysiwyg: true, height: 400 }

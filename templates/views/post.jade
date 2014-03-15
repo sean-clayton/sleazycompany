@@ -14,4 +14,22 @@ block content
 						h3
 							= data.post.subtitle
 				.post
-					!= data.post.content.full
+
+					header.post-header
+						if data.post.mission
+							h4.meta-title Mission(s)
+							span.meta-detail
+								!= data.post.mission
+						if data.post.missionDateTime
+							h4.meta-title Mission Date
+							span.meta-detail
+								= data.post.missionDateTime
+							h4.meta-title Mission Time
+							span.meta-detail
+								= data.post.missionDateTime
+						if data.post.etc
+							h4.meta-title ETC
+							span.meta-detail
+								= data.post.etc
+					section.post-content
+						!= data.post.content.full

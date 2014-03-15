@@ -61,6 +61,7 @@ html, body {
   cursor: default;
   background-image: @grid-pattern;
   background-size: 50px 50px;
+  background-position: center center;
 
   h1, h2 {
     margin: 0 0 0 0;
@@ -73,6 +74,24 @@ html, body {
     font-family: @headings-font-family;
     text-transform: uppercase;
     margin: 1em 0 0 0;
+  }
+}
+
+.home-jumbo {
+  background-color: @home-jumbo-bg;
+}
+.downloads-jumbo {
+  background-color: @downloads-jumbo-bg;
+}
+.intel-jumbo {
+  background-color: @intel-jumbo-bg;
+}
+.media-jumbo {
+  background-color: @media-jumbo-bg;
+}
+.post-jumbo {
+  img {
+    width: 100%;
   }
 }
 
@@ -99,35 +118,34 @@ html, body {
   }
 }
 
-.home-jumbo {
-  background-color: @home-jumbo-bg;
-}
-.downloads-jumbo {
-  background-color: @downloads-jumbo-bg;
-}
-.intel-jumbo {
-  background-color: @intel-jumbo-bg;
-}
-.media-jumbo {
-  background-color: @media-jumbo-bg;
-}
-.post-jumbo {
-  img {
-    width: 100%;
-  }
-}
-
 article {
   .post {
+    padding: 3em 4em;
+
     p {
       font-size: 1.2em;
-      max-width: 1024px;
       line-height: 1.75em;
-      margin: 0 auto 2em auto;
+      margin: 1em auto;
     }
     p[last-child] {
       margin-bottom: 0;
     }
+
+    @media only screen and (max-width: @screen-sm-max) {
+      padding: 2em;
+    }
+    @media only screen and (max-width: @screen-xs-max) {
+      padding: 1em;
+    }
+  }
+}
+
+.post-header {
+  .meta-title {
+    font-size: 1.75em;
+  }
+  .meta-detail {
+    font-size: 1em;
   }
 }
 
@@ -146,6 +164,10 @@ article {
 
   .lead {
     font-size: 1em;
+  }
+
+  @media only screen and (max-width: @screen-sm-max) {
+    box-shadow: 0 8px 12px rgba(0,0,0,.25);
   }
 }
 
@@ -198,4 +220,8 @@ article {
 .twitter-widget {
   display: inline-block;
   min-height: 360px;
+}
+
+#instantclick-bar {
+  height: 1px;
 }
