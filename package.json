@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "keystone": "~0.2.7",
+    "keystone": "latest",
     "async": "~0.2.9",
     "underscore": "~1.5.2",
     "dotenv": "0.0.3"
@@ -16,8 +16,6 @@
     "start": "keystone.js"
   },
   "devDependencies": {
-    "grunt": "^0.4.3",
-    "grunt-jade-handlebars": "^0.1.2",
     "forever": "^0.10.11"
   }
 }
