@@ -23,7 +23,7 @@ keystone.init({
 
 	'auto update': true,
 
-	'port': 80085,
+	'port': 8008,
 
 	'session': true,
 	'auth': true,
