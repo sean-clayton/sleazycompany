@@ -282,8 +282,18 @@ section.download-item {
       .download-item-gradient(@color, .85, .45);
     }
   }
-  &.optional-pack {
+  &.recommended-pack {
     @color: @brand-primary;
+    .download-item-gradient(@color, .7, .45);
+    &:hover {
+      border: 1px solid @color;
+      .scale(@scale);
+      .download-item-gradient(@color, .85, .45);
+    }
+  }
+  &.barebones-pack {
+    @color: #eee;
+    color: #fff;
     .download-item-gradient(@color, .7, .45);
     &:hover {
       border: 1px solid @color;
