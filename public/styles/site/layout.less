@@ -251,13 +251,13 @@ section.download-item {
   height: 24em;
   overflow-y: auto;
   text-shadow: 0 1px 0 black;
-  -webkit-transition: .1s ease -webkit-transform, .25s ease box-shadow;
-  .transition(.1s ease transform, .25 ease box-shadow);
+  -webkit-transition: .1s ease -webkit-transform, .1s ease box-shadow;
+  .transition(.1s ease transform, .1s ease box-shadow);
   .download-item-gradient(#fff, .3, .2);
+  .user-select(none);
 
   &:hover {
-    -webkit-transform: scale(@scale);
-    transform: scale(@scale);
+    .scale(@scale);
     cursor: pointer;
     position: relative;
     z-index: 1000 !important;
@@ -269,8 +269,7 @@ section.download-item {
     .download-item-gradient(#fd3, .6, .375);
     border: 1px solid fade(#fd3, 80%);
     &:hover {
-      -webkit-transform: scale(@scale);
-      transform: scale(@scale);
+      .scale(@scale);
       .download-item-gradient(#fd3, .75, .375);
     }
   }
