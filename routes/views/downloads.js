@@ -11,4 +11,5 @@ exports = module.exports = function(req, res) {
   // Render the view
   view.render('downloads');
 
+  req.flash('warning', 'Red items are the required mods included in the modpack, but are separated if you already have some installed. Blue items are highly recommended mods. Gray items are completely optional mods.');
 }
