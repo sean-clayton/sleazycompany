@@ -172,10 +172,14 @@ article {
 }
 
 .gallery-image {
+  display: inline-block;
   padding: 0;
-  :hover {
-    position: relative;
-    z-index: 1000 !important;
+  -webkit-transition: .1s ease -webkit-transform, 1s ease background-image;
+  transition: .1s ease transform, 1s ease background-image;
+  &:hover {
+    z-index: 1000;
+    -webkit-transform: scale(@scale);
+    transform: scale(@scale);
     box-shadow: 0 0 10px rgba(0,0,0,.5);
   }
 }
@@ -223,5 +227,68 @@ article {
 }
 
 #instantclick-bar {
-  height: 1px;
+  height: 2px;
+}
+
+.download-items {
+  padding: 0 1em;
+}
+
+section.download-item {
+  .transition(ease background-image 1s);
+}
+
+.download-item-gradient (@color, @a-start, @a-end) {
+  @r: red(@color);
+  @g: green(@color);
+  @b: blue(@color);
+  background-image: linear-gradient(to bottom right, rgba(@r,@g,@b,@a-start), rgba(@r,@g,@b,@a-end)), @noise-bg;
+}
+
+.download-item {
+  display: inline-block;
+  background: #0c0c0c;
+  height: 24em;
+  overflow-y: auto;
+  text-shadow: 0 1px 0 black;
+  -webkit-transition: .1s ease -webkit-transform, 1s ease background-image;
+  transition: .1s ease transform, 1s ease background-image;
+  .download-item-gradient(#fff, .3, .2);
+
+  &:hover {
+    -webkit-transform: scale(@scale);
+    transform: scale(@scale);
+    cursor: pointer;
+    position: relative;
+    z-index: 1000 !important;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    .download-item-gradient(#fff, .45, .2);
+  }
+
+  &.focus {
+    z-index: 1000;
+    .download-item-gradient(#fd3, .6, .375);
+    -webkit-transform: scale(@scale);
+    transform: scale(@scale);
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    border: 1px solid fade(#fd3, 80%);
+    &:hover {
+      box-shadow: 0 0 20px rgba(0,0,0,.5);
+      -webkit-transform: scale(@scale + .025);
+      transform: scale(@scale + .025);
+      .download-item-gradient(#fd3, .75, .375);
+    }
+  }
+  &.required {
+    .download-item-gradient(@brand-danger, .45, .375);
+    &:hover {.download-item-gradient(@brand-danger, .75, .375);}
+  }
+  &.recommended {
+    .download-item-gradient(@brand-primary, .45, .375);
+    &:hover {.download-item-gradient(@brand-primary, .75, .375);}
+  }
+
+  h3 {
+    font-size: 2.33em;
+  }
 }
