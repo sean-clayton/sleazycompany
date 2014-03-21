@@ -252,10 +252,7 @@ section.download-item {
   overflow-y: auto;
   text-shadow: 0 1px 0 black;
   -webkit-transition: .1s ease -webkit-transform, .25s ease box-shadow;
-  -moz-transition: .1s ease transform, .25 ease box-shadow;
-  -ms-transition: .1s ease transform, .25 ease box-shadow;
-  -o-transition: .1s ease transform, .25 ease box-shadow;
-  transition: .1s ease transform, .25 ease box-shadow;
+  .transition(.1s ease transform, .25 ease box-shadow);
   .download-item-gradient(#fff, .3, .2);
 
   &:hover {
@@ -268,12 +265,10 @@ section.download-item {
     .download-item-gradient(#fff, .45, .2);
   }
 
-  &.focus {
-    z-index: 1000;
+  &.pack {
     .download-item-gradient(#fd3, .6, .375);
     border: 1px solid fade(#fd3, 80%);
     &:hover {
-      box-shadow: 0 0 20px rgba(0,0,0,.5);
       -webkit-transform: scale(@scale);
       transform: scale(@scale);
       .download-item-gradient(#fd3, .75, .375);
