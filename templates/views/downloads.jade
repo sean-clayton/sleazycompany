@@ -11,7 +11,18 @@ block content
       button(type="button", data-dismiss="alert", aria-hidden="true").close &times;
       | <strong>Red</strong> items are the required mods included in the modpack, but are separated if you already have some installed. <strong>Blue</strong> items are highly recommended mods. <strong>Gray</strong> items are completely optional mods.
     section.row.download-items
-      div(onclick="").download-item.pack.col-sm-12
+      div(onclick="").download-item.main-pack.col-sm-6
+        h3 Mod Pack
+        span.filesize
+          strong Filesize:
+        |  ~40Mb
+        <br>
+        span.filename
+          strong Filename:
+        |  fileNameHere.rar
+        <hr>
+        p.download-description Mister wayne, if you don't want to tell me exactly what you're doing, when i'm asked, i don't have to lie. but don't think of me as an idiot.
+      div(onclick="").download-item.optional-pack.col-sm-6
         h3 Mod Pack
         span.filesize
           strong Filesize:

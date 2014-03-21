@@ -265,21 +265,33 @@ section.download-item {
     .download-item-gradient(#fff, .45, .2);
   }
 
-  &.pack {
-    .download-item-gradient(#fd3, .6, .375);
-    border: 1px solid fade(#fd3, 80%);
+  &.main-pack {
+    @color: #fd3;
+    .download-item-gradient(@color, .7, .45);
     &:hover {
+      border: 1px solid fade(@color, 80%);
       .scale(@scale);
-      .download-item-gradient(#fd3, .75, .375);
+      .download-item-gradient(@color, .85, .45);
+    }
+  }
+  &.optional-pack {
+    @color: @brand-primary;
+    .download-item-gradient(@color, .7, .45);
+    &:hover {
+      border: 1px solid @color;
+      .scale(@scale);
+      .download-item-gradient(@color, .85, .45);
     }
   }
   &.required {
-    .download-item-gradient(@brand-danger, .45, .375);
-    &:hover {.download-item-gradient(@brand-danger, .75, .375);}
+    @color: @brand-danger;
+    .download-item-gradient(@color, .45, .375);
+    &:hover {.download-item-gradient(@color, .75, .375);}
   }
   &.recommended {
-    .download-item-gradient(@brand-primary, .45, .375);
-    &:hover {.download-item-gradient(@brand-primary, .75, .375);}
+    @color: @brand-primary;
+    .download-item-gradient(@color, .45, .375);
+    &:hover {.download-item-gradient(@color, .75, .375);}
   }
 
   h3 {
