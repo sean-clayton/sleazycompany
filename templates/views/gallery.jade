@@ -15,14 +15,15 @@ block content
 		hr
 		if galleries.length
 			each gallery in galleries
-				.row: .col.lg-12
-					h3= gallery.name
-						if gallery.publishedDate
-							.pull-right.text-muted= gallery._.publishedDate.format('MMMM Do YYYY')
+				section.gallery
+					.row: .col.lg-12
+						h3= gallery.name
+							if gallery.publishedDate
+								.pull-right.text-muted= gallery._.publishedDate.format('MMMM Do YYYY')
 
-				.row.gallery-images
-					each image in gallery.images
-						.col-xs-3.col-md-4.gallery-image
-							a(href=image.url): img(src=image.thumbnail(512,512)).img-responsive
+					.row.gallery-images
+						each image in gallery.images
+							.col-xs-3.col-md-4.gallery-image
+								a(href=image.url): img(src=image.thumbnail(512,512)).img-responsive
 		else
 			h3.text-muted There are no image galleries yet.
