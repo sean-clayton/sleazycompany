@@ -23,10 +23,9 @@ html
 
 		//- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
 		//- Safely remove this block if you are not targeting IE8
-		//-[if lt IE 9]
-			script(src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js")
-			script(src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js")
-		//-[endif]
+		[if lt IE 9]
+		script(src="/js/modernizr.min.js")
+		[endif]
 
 		//- Include template-specific stylesheets by extending the css block
 		block css
@@ -35,8 +34,8 @@ html
 		block head
 
 	//- HTML BODY
-	body
-		#wrap
+	body.site
+		main.content-wrap
 			//- HEADER
 			header.main-header: .container
 
@@ -80,56 +79,56 @@ html
 				block content
 
 
-			//- FOOTER
-			//- footer.main-footer: .container
+		//- FOOTER
+		footer.main-footer: .container
 
-				//- You don't _have_ to include a link saying your site is powered by KeystoneJS, but we appreciate it!
-				//- p.copyright-info &copy;<script>document.write(new Date().getFullYear());</script> Sleazy Company. Site designed by <a href="http://skulbuny.com" target="_blank">Sean Clayton.</a>
+			//- You don't _have_ to include a link saying your site is powered by KeystoneJS, but we appreciate it!
+			p.copyright-info &copy;2014 Sleazy Company. Site designed by <a href="http://skulbuny.com" target="_blank">Sean Clayton.</a>
 
 
-			//- JAVASCRIPT
+		//- JAVASCRIPT
 
-			//- jQuery 1.11.0 is included by default, and required by both Bootstrap
-			//- and the KeystoneJS Content Editor. If you are not targeting IE8,
-			//- you can upgrade to 2.1.0 (also bundled) for better performance.
-			script(src='/js/lib/jquery/jquery-2.1.0.min.js')
+		//- jQuery 1.11.0 is included by default, and required by both Bootstrap
+		//- and the KeystoneJS Content Editor. If you are not targeting IE8,
+		//- you can upgrade to 2.1.0 (also bundled) for better performance.
+		script(src='/js/lib/jquery/jquery-2.1.0.min.js')
 
-			//- Customise which Bootstrap javascript files are served by including
-			//- them specifically here, instead of bootstrap-3.1.0.min.js
-			script(src='/js/lib/bootstrap/bootstrap-3.1.0.min.js')
+		//- Customise which Bootstrap javascript files are served by including
+		//- them specifically here, instead of bootstrap-3.1.0.min.js
+		script(src='/js/lib/bootstrap/bootstrap-3.1.0.min.js')
 
-			//- Google Fonts Library
-			script(type='text/javascript').
-				WebFontConfig = {
-					google: { families: [ 'Exo+2:400,200,700:latin', 'Open+Sans:400,700:latin' ] }
-				};
-				(function() {
-					var wf = document.createElement('script');
-					wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-						'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-					wf.type = 'text/javascript';
-					wf.async = 'true';
-					var s = document.getElementsByTagName('script')[0];
-					s.parentNode.insertBefore(wf, s);
-				})();
+		//- Google Fonts Library
+		script(type='text/javascript').
+			WebFontConfig = {
+				google: { families: [ 'Exo+2:400,200,700:latin', 'Open+Sans:400,700:latin' ] }
+			};
+			(function() {
+				var wf = document.createElement('script');
+				wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+					'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+				wf.type = 'text/javascript';
+				wf.async = 'true';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(wf, s);
+			})();
 
-			//- Add scripts that are globally required by your site here.
-			script(src='/js/masonry.pkgd.min.js')
-			script(type='text/javascript').
-				var $container = $('.cards');
-				$container.masonry({
-					columnWidth: '.card',
-					itemSelector: '.card',
-					transitionDuration: '80ms'
-				});
-			script(src='/js/instantclick.min.js',data-no-instant)
-			script(data-no-instant).
-				InstantClick.init();
+		//- Add scripts that are globally required by your site here.
+		script(src='/js/masonry.pkgd.min.js')
+		script(type='text/javascript').
+			var $container = $('.cards');
+			$container.masonry({
+				columnWidth: '.card',
+				itemSelector: '.card',
+				transitionDuration: '80ms'
+			});
+		script(src='/js/instantclick.min.js',data-no-instant)
+		script(data-no-instant).
+			InstantClick.init();
 
-			//- The KeystoneJS Content Editor provides support for ks-editable data attributes,
-			//- which generate links to edit content for users who can access Keystone
-			if user && user.canAccessKeystone
-				script(src='/keystone/js/content/editor.js')
+		//- The KeystoneJS Content Editor provides support for ks-editable data attributes,
+		//- which generate links to edit content for users who can access Keystone
+		if user && user.canAccessKeystone
+			script(src='/keystone/js/content/editor.js')
 
-			//- Include template-specific javascript files by extending the js block
-			block js
+		//- Include template-specific javascript files by extending the js block
+		block js
