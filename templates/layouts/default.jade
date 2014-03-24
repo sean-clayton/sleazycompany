@@ -23,9 +23,9 @@ html
 
 		//- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
 		//- Safely remove this block if you are not targeting IE8
-		[if lt IE 9]
+		<!--[if lt IE 9]><!-->
 		script(src="/js/modernizr.min.js")
-		[endif]
+		<!--<![endif]-->
 
 		//- Include template-specific stylesheets by extending the css block
 		block css
@@ -43,7 +43,7 @@ html
 				//- ... or completely change this header to suit your design.
 
 				.container
-					div(role="navigation").navbar.navbar-default.navbar-fixed-top
+					nav(role="navigation").navbar.navbar-default.navbar-fixed-top.main-nav
 						.container
 							.navbar-header
 								button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
@@ -86,6 +86,11 @@ html
 			//- p.copyright-info &copy;2014 Sleazy Company. Site designed by <a href="http://skulbuny.com" target="_blank">Sean Clayton.</a>
 
 
+		//- Bottom of the totem-pole shit
+
+		//- Font Awesome
+		link(href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css", rel="stylesheet")
+
 		//- JAVASCRIPT
 
 		//- jQuery 1.11.0 is included by default, and required by both Bootstrap
@@ -124,6 +129,16 @@ html
 		script(src='/js/instantclick.min.js',data-no-instant)
 		script(data-no-instant).
 			InstantClick.init();
+		script(src="/js/jquery.typewriter.js")
+		script(type="text/javascript").
+			$(document).ready(function(){
+				$(".teletype").typewriter({
+					typing_speed: "425",
+					delay: 200,
+					random: true,
+					randomMax: 100
+				});
+			})
 
 		//- The KeystoneJS Content Editor provides support for ks-editable data attributes,
 		//- which generate links to edit content for users who can access Keystone

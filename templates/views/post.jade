@@ -11,7 +11,7 @@ block content
 					h2
 						= data.post.title
 					if data.post.subtitle
-						h3
+						h3(data-text=data.post.subtitle).teletype
 							= data.post.subtitle
 				.post
 

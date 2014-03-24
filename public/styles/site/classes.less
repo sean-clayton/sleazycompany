@@ -28,6 +28,43 @@
   min-height: 360px;
 }
 
+.full-width {
+  display: block;
+  width: 100%;
+}
+
+.social-follow {
+}
+
+#social-follow{
+  .twitter-follow {
+    @bg: #4099ff;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+    text-shadow: 0 1px 0 rgba(0,0,0,.5);
+    background: @bg;
+    padding: .5em 0;
+    .box-shadow(0 6px 0 darken(@bg, 20%));
+    .user-select(none);
+
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
+      color: white;
+      background: darken(@bg, 10%);
+      .box-shadow(0 6px 0 darken(@bg, 25%));
+    }
+
+    &:active {
+      position: relative;
+      top: 6px;
+      background: @bg;
+      .box-shadow(none);
+    }
+  }
+}
+
 #instantclick-bar {
   height: 2px;
 }
