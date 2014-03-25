@@ -11,8 +11,10 @@ block content
 					h2
 						= data.post.title
 					if data.post.subtitle
-						h3(data-text=data.post.subtitle).teletype
-							= data.post.subtitle
+						h3
+							span(data-text=data.post.subtitle).teletype
+								= data.post.subtitle
+							span.blink _
 				.post
 
 					header.post-header
@@ -33,3 +35,12 @@ block content
 								= data.post.etc
 					section.post-content
 						!= data.post.content.full
+
+block js
+	script(src="/js/jquery.blink.js")
+	script.
+		$(document).ready(function()
+		{
+			$('.blink').blink(); // default is 500ms blink interval.
+			//$('.blink').blink({delay:100}); // causes a 100ms blink interval.
+		});

@@ -3,8 +3,9 @@ extends ../layouts/default
 block intro
 	.container: header.jumbotron.home-jumbo
 		h1 Sleazy Company
-		p.tagline.teletype(data-text="Welcome to Sleazy Company!").
-			Welcome to Sleazy Company!
+		p.tagline
+			span(data-text="Welcome to Sleazy Company").teletype Welcome to Sleazy Company
+			span.blink _
 
 block content
 	.container
@@ -50,3 +51,12 @@ block content
 					a(href="//twitter.com/sleazycompany").twitter-follow.full-width
 						i.fa.fa-twitter &nbsp;
 						| Follow Us!
+
+block js
+	script(src="/js/jquery.blink.js")
+	script.
+		$(document).ready(function()
+		{
+			$('.blink').blink(); // default is 500ms blink interval.
+			//$('.blink').blink({delay:100}); // causes a 100ms blink interval.
+		});
