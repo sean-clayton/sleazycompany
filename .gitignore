@@ -8,6 +8,8 @@ lib-cov
 .env
 *.css
 
+public/downloads
+
 pids
 logs
 results
