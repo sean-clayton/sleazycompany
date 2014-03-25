@@ -13,4 +13,5 @@ This branch is currently ***UNSTABLE*** and is not guaranteed to work correctly.
 2. Run `git clone https://github.com/skulbuny/sleazycompany.git`
 3. Run `npm i` to install all Node dependencies
 4. Run `mongod` to start your Mongo database
-5. Run `forever start keystone.js` to start your server (defaults to localhost:3000)
+5. Run `forever start keystone.js`
+6. Open [http://localhost:8008](http://localhost:8008) in your browser.
