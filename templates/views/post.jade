@@ -19,20 +19,21 @@ block content
 
 					header.post-header
 						if data.post.mission
-							h4.meta-title Mission(s)
+							span.meta-title Mission(s)
 							span.meta-detail
 								!= data.post.mission
 						if data.post.missionDateTime
-							h4.meta-title Mission Date
+							span.meta-title Mission Date
 							span.meta-detail
 								= data.post.missionDateTime
-							h4.meta-title Mission Time
+							span.meta-title Mission Time
 							span.meta-detail
 								= data.post.missionDateTime
 						if data.post.etc
-							h4.meta-title ETC
+							span.meta-title ETC
 							span.meta-detail
 								= data.post.etc
+						hr
 					section.post-content
 						!= data.post.content.full
 
