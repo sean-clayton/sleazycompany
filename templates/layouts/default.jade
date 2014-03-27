@@ -60,7 +60,13 @@ html
 										li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
 								ul.nav.navbar-nav.navbar-right
 									if user
-										li: a(href='/keystone/signout',data-no-instant) Sign Out
+										li.dropdown
+											a(href="#", data-toggle="dropdown").dropdown-toggle
+												| Tools
+												b.caret
+											ul.dropdown-menu
+												li: a(href="/keystone", data-no-instant) Control Panel
+												li: a(href='/keystone/signout',data-no-instant) Sign Out
 									else
 										li: a(href='/keystone/signin',data-no-instant) Sign In
 
