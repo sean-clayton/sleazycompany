@@ -5,8 +5,15 @@ html, body {
   background-color: @body-bg;
 }
 
-.site {
+.row {
+  @media only screen and (max-width: @screen-xs-max) {
+    margin: 0;
+  }
 }
 
-.content-wrap {
+.container {
+	@media only screen and (max-width: @screen-xs-max) {
+    margin: 0;
+    padding: 0;
+  }
 }

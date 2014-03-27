@@ -9,7 +9,7 @@
 
   @media (max-width: @screen-xs-max) {
     overflow: hidden;
-    padding: 0 0 0 15px;
+    padding: 0;
   }
 }
 
@@ -23,10 +23,20 @@
   }
 }
 
+.navbar-header {
+  @media only screen and (max-width: @screen-xs-max) {
+    padding: 0 1em 0 1em;
+  }
+}
+
 .navbar-default .navbar-nav {
   .active {
     a:hover, a:focus {
       background: @navbar-default-link-active-hover-bg;
     }
+  }
+
+  @media only screen and (max-width: @screen-xs-max) {
+    padding: 0 2em 0 2em;
   }
 }
