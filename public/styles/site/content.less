@@ -3,6 +3,10 @@
   padding: .5em 2em 2em 2em;
   background-color: rgba(0,0,0,.5);
   #gradient > .vertical(desaturate(darken(@green, 25%), 70%); desaturate(darken(@green, 30%), 70%));
+
+  @media only screen and (max-width: @screen-xs-max) {
+    padding: .5em 1em 1em 1em;
+  }
 }
 
 article {
