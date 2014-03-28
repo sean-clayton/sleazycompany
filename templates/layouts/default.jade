@@ -127,14 +127,14 @@ html
 			})();
 
 		//- Add scripts that are globally required by your site here.
-		script(src='/js/masonry.pkgd.min.js')
-		script(type='text/javascript').
-			var $container = $('.cards');
-			$container.masonry({
-				columnWidth: '.card',
-				itemSelector: '.card',
-				transitionDuration: '80ms'
-			});
+		//- script(src='/js/masonry.pkgd.min.js')
+		//- script(type='text/javascript').
+		//- 	var $container = $('.cards');
+		//- 	$container.masonry({
+		//- 		columnWidth: '.card',
+		//- 		itemSelector: '.card',
+		//- 		transitionDuration: '80ms'
+		//- 	});
 		script(src='/js/instantclick.min.js',data-no-instant)
 		script(data-no-instant).
 			InstantClick.init();
@@ -142,8 +142,8 @@ html
 		script(type="text/javascript").
 			$(document).ready(function(){
 				$(".teletype").typewriter({
-					typing_speed: "425",
-					delay: 200,
+					typing_speed: "700",
+					delay: 0,
 					random: true,
 					randomMax: 100
 				});

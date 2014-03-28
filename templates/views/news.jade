@@ -5,8 +5,11 @@ mixin post(post)
 		h2
 			a(href='/news/post/' + post.slug)
 				= post.title
+		p(itemprop='description')!= post.content.brief
 		if post.content.extended
-			p.read-more: a(href='/news/post/' + post.slug) Read more...
+			p.read-more: a(href='/news/post/' + post.slug)
+				| Go to post
+				span.entypo.entypo-chevron-thin-right
 
 block intro
 	.container: header.jumbotron.intel-jumbo

@@ -14,11 +14,12 @@ Post.add({
 	author: { type: Types.Relationship, ref: 'User', index: true },
 	publishedDate: { type: Types.Date, index: true },
 	mission: { type: String, index: true, label: 'Mission(s)' },
-	missionDateTime: { type: Date, default: Date.now, index: true },
+	missionDateTime: { type: Date, index: true },
 	etc: { type: Number, index: true, label: 'ETC' },
+	includeSeparator: { type: Boolean, label: 'Include horizontal separator?' },
 	content: {
-		brief: { type: Types.Html, wysiwyg: true, height: 150 },
-		extended: { type: Types.Html, wysiwyg: true, height: 400 }
+		brief: { type: Types.Html, wysiwyg: true, height: 100 },
+		extended: { type: Types.Html, wysiwyg: true, height: 500 }
 	},
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true }
 });

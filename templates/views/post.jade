@@ -31,7 +31,8 @@ block content
 							span.meta-detail
 								= data.post.etc
 							span  hours
-						hr
+						if data.post.includeSeparator
+							hr
 					section.post-content
 						!= data.post.content.full
 
@@ -40,6 +41,6 @@ block js
 	script.
 		$(document).ready(function()
 		{
-			$('.blink').blink(); // default is 500ms blink interval.
-			//$('.blink').blink({delay:100}); // causes a 100ms blink interval.
+			// $('.blink').blink(); // default is 500ms blink interval.
+			$('.blink').blink({delay: 400}); // causes a 100ms blink interval.
 		});
