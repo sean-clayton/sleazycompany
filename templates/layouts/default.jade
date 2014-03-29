@@ -31,6 +31,13 @@ html
 		script(src="/js/modernizr.min.js")
 		<!--<![endif]-->
 
+		//- Prefetching
+
+		link(rel="prefetch", href="/")
+		link(rel="prefetch", href="//cdn.syndication.twimg.com/widgets/timelines/443185826113933312")
+		link(rel="prefetch", href="/js/lib/jquery/jquery-2.1.0.min.js")
+		link(rel="prefetch", href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css")
+
 		//- Include template-specific stylesheets by extending the css block
 		block css
 
@@ -115,7 +122,7 @@ html
 		script(src='/js/lib/bootstrap/bootstrap-3.1.0.min.js')
 
 		//- Google Fonts Library
-		script(type='text/javascript').
+		script(type='text/javascript', async).
 			WebFontConfig = {
 				google: { families: [ 'Exo+2:400,200,700:latin', 'Open+Sans:400,700:latin' ] }
 			};
@@ -138,7 +145,7 @@ html
 		//- 		itemSelector: '.card',
 		//- 		transitionDuration: '80ms'
 		//- 	});
-		script(src='/js/instantclick.min.js',data-no-instant)
+		script(src='/js/instantclick.min.js', data-no-instant, async)
 		script(data-no-instant).
 			InstantClick.init();
 		script(src="/js/jquery.typewriter.js")
@@ -156,10 +163,6 @@ html
 		//- which generate links to edit content for users who can access Keystone
 		if user && user.canAccessKeystone
 			script(src='/keystone/js/content/editor.js')
-
-		//- Prefetching
-
-		link(rel="prefetch", href="/")
 
 		//- Include template-specific javascript files by extending the js block
 		block js
