@@ -1,7 +1,7 @@
 include ../mixins/flash-messages
 
 doctype html
-html
+html(manifest="sleazycompany.appcache")
 
 	//- HTML HEADER
 	head
@@ -34,6 +34,7 @@ html
 		//- Prefetching
 
 		link(rel="prefetch", href="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js")
+		link(rel="prefetch", href="//fonts.googleapis.com/css?family=Exo+2:400,200,700%7COpen+Sans:400,700&subset=latin,latin")
 		link(rel="prefetch", href="//cdn.syndication.twimg.com/widgets/timelines/443185826113933312")
 		link(rel="prefetch", href="/js/lib/jquery/jquery-2.1.0.min.js")
 		link(rel="prefetch", href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css")
@@ -136,15 +137,6 @@ html
 				s.parentNode.insertBefore(wf, s);
 			})();
 
-		//- Add scripts that are globally required by your site here.
-		//- script(src='/js/masonry.pkgd.min.js')
-		//- script(type='text/javascript').
-		//- 	var $container = $('.cards');
-		//- 	$container.masonry({
-		//- 		columnWidth: '.card',
-		//- 		itemSelector: '.card',
-		//- 		transitionDuration: '80ms'
-		//- 	});
 		script(src='/js/instantclick.min.js', data-no-instant, async)
 		script(data-no-instant).
 			InstantClick.init();
@@ -158,6 +150,8 @@ html
 					randomMax: 100
 				});
 			})
+
+		include ../includes/analytics
 
 		//- The KeystoneJS Content Editor provides support for ks-editable data attributes,
 		//- which generate links to edit content for users who can access Keystone
