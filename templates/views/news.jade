@@ -8,8 +8,8 @@ mixin post(post)
 		p(itemprop='description')!= post.content.brief
 		if post.content.extended
 			p.read-more: a(href='/news/post/' + post.slug)
-				| Go to post
-				span.entypo.entypo-chevron-thin-right
+				| Continue reading&nbsp;
+				i.fa.fa-angle-double-right
 
 block intro
 	.container: header.jumbotron.intel-jumbo
@@ -41,7 +41,7 @@ block content
 							else
 								li.disabled: a(href='?page=' + data.posts.totalPages): span.entypo.entypo-chevron-thin-right
 				else
-					.alert.alert-warning
+					.alert.alert-info
 						if data.category
 							p. There are no posts in the category #{data.category.name}.
 						else

@@ -1,3 +1,9 @@
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .main-content {
   text-shadow: 0 1px 0 rgba(0,0,0,1);
   padding: .5em 2em 2em 2em;
@@ -11,7 +17,7 @@
 
 article {
   .post {
-    padding: 3em 4em;
+    padding: 1em 1em;
 
     p {
       font-size: 1em;
@@ -72,6 +78,14 @@ article {
   }
 }
 
+.read-more {
+  a {
+    &:hover {
+      border-bottom: 1px dotted @link-hover-color;
+    }
+  }
+}
+
 .gallery {
   padding: 0 1em;
 }
@@ -122,7 +136,6 @@ section.download-item {
   overflow-y: auto;
   text-shadow: 0 1px 0 black;
   -webkit-transition: .1s ease -webkit-transform, .1s ease box-shadow;
-  border: 1px solid rgba(0,0,0,0);
   .transition(.1s ease transform, .1s ease box-shadow);
   .download-item-gradient(#fff, .3, .2);
   .user-select(none);
