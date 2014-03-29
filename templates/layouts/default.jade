@@ -19,7 +19,7 @@ html
 		//- Customise the stylesheet for your site by editing /public/styles/site.less
 		//- All .less files will be automatically compiled and minified in production.
 
-		//- link(href="/styles/site.min.css", rel="stylesheet")
+		link(href="/styles/site.min.css", rel="prefetch stylesheet")
 
 		//- This file provides the default styling for the KeystoneJS Content Editor
 		if user && user.canAccessKeystone
@@ -100,8 +100,6 @@ html
 
 		//- Bottom of the totem-pole shit
 
-		link(href="/styles/site.min.css", rel="stylesheet")
-
 		//- Font Awesome
 		link(href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css", rel="stylesheet")
 
@@ -158,6 +156,10 @@ html
 		//- which generate links to edit content for users who can access Keystone
 		if user && user.canAccessKeystone
 			script(src='/keystone/js/content/editor.js')
+
+		//- Prefetching
+
+		link(rel="prefetch", href="/")
 
 		//- Include template-specific javascript files by extending the js block
 		block js
