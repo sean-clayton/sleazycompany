@@ -1,5 +1,17 @@
 extends ../layouts/default
 
+block head
+
+	//- Twitter Card Support
+	meta(name="twitter:card", content="summary")
+	meta(name="twitter:site", content="@sleazycompany")
+	if data.post.twitterCreator
+		meta(name="twitter:creator", content=data.post.twitterCreator)
+	else
+		meta(name="twitter:creator", content="@sleazycompany")
+	meta(name="twitter:title", content=data.post.title)
+	meta(name="twitter:description", content=data.post.twitterDescription)
+
 block content
 	.container: .row: .col-sm-12.no-mobile-padding
 		article
@@ -16,7 +28,6 @@ block content
 								= data.post.subtitle
 							span.blink _
 				.post
-
 					header.post-header
 						if data.post.mission
 							span.meta-title Mission(s)
