@@ -76,3 +76,29 @@
 		padding: 0;
 	}
 }
+
+.ks-editable-btn {
+
+  position: absolute;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: normal;
+  text-transform: uppercase;
+  vertical-align: middle;
+  line-height: 1em;
+  text-align: center;
+  cursor: pointer;
+  color: @link-color;
+  white-space: nowrap;
+  text-decoration: none;
+  .user-select(none);
+
+  .transition(opacity .15s linear);
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: @link-hover-color;
+  }
+
+}
