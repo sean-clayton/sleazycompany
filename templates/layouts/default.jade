@@ -136,16 +136,14 @@ html(manifest="sleazycompany.appcache")
 		script(src='/js/instantclick.min.js', data-no-instant, async)
 		script(data-no-instant).
 			InstantClick.init();
-		script(src="/js/jquery.typewriter.js")
+		script(src="/js/jquery.typewriter.new.js")
 		script(type="text/javascript").
-			$(document).ready(function(){
-				$(".teletype").typewriter({
-					typing_speed: "700",
-					delay: 0,
-					random: true,
-					randomMax: 100
-				});
-			})
+			$('.teletype').typewrite({
+				'delay': 80, //time in ms between each letter
+				'extra_char': '_', //"cursor" character to append after each display
+				'trim': true, // Trim the string to type (Default: false, does not trim)
+				'callback': null // if exists, called after all effects have finished
+			});
 
 		include ../includes/analytics
 

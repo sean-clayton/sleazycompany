@@ -26,7 +26,12 @@ block content
 						h3
 							span(data-text=data.post.subtitle).teletype
 								= data.post.subtitle
-							span.blink _
+
+				if user && user.canAccessKeystone
+					a(href="/keystone/posts/" + data.post.id).edit-button
+						i.fa.fa-pencil &nbsp;
+						| Edit Post
+
 				.post
 					header.post-header
 						if data.post.mission
