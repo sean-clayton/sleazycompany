@@ -66,7 +66,7 @@ html(manifest="sleazycompany.appcache")
 								ul.nav.navbar-nav.navbar-right
 									if user
 										li.dropdown
-											a(href="#", data-toggle="dropdown").dropdown-toggle
+											a(href="#", data-toggle="dropdown", data-no-instant).dropdown-toggle
 												| Tools
 												b.caret
 											ul.dropdown-menu
@@ -96,10 +96,9 @@ html(manifest="sleazycompany.appcache")
 
 
 		//- FOOTER
-		//- footer.main-footer: .container
+		footer.main-footer: .container
 
-			//- You don't _have_ to include a link saying your site is powered by KeystoneJS, but we appreciate it!
-			//- p.copyright-info &copy;2014 Sleazy Company. Site designed by <a href="http://skulbuny.com" target="_blank">Sean Clayton.</a>
+			p.copyright-info &copy;2014 Sleazy Company. Site designed with <i class="love fa fa-heart"></i> by <a href="http://skulbuny.com">Sean Clayton.</a> Source code on <a href="http://github.com/skulbuny/sleazycompany"><i class="fa fa-github"></i></a>
 
 
 		//- Bottom of the totem-pole shit
