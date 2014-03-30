@@ -51,12 +51,3 @@ block content
 							hr
 					section.post-content
 						!= data.post.content.full
-
-block js
-	script(src="/js/jquery.blink.js")
-	script.
-		$(document).ready(function()
-		{
-			// $('.blink').blink(); // default is 500ms blink interval.
-			$('.blink').blink({delay: 400}); // causes a 100ms blink interval.
-		});
