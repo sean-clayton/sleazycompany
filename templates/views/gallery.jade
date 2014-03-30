@@ -14,11 +14,12 @@ block content
 				.col-md-7.col-centered
 					.flex-video.widescreen
 						iframe(src='//www.youtube.com/embed/' + featuredVideo,allowfullscreen='true',frameborder='0')
-		.row:.col-sm-12.no-mobile-padding
-			section.image-gallery
-				h2 Images
-				hr
-				if galleries.length
+
+		if galleries.length
+			.row:.col-sm-12.no-mobile-padding
+				section.image-gallery
+					h2 Images
+					hr
 					each gallery in galleries
 						section.gallery
 							.row: .col-lg-12.no-mobile-padding
@@ -30,5 +31,3 @@ block content
 								each image in gallery.images
 									.col-xs-3.col-md-4.gallery-image
 										a(href=image.url): img(src=image.thumbnail(512,512)).img-responsive
-				else
-					h3 Nothing to show here :(

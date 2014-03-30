@@ -144,6 +144,9 @@ html(manifest="sleazycompany.appcache")
 				'callback': null // if exists, called after all effects have finished
 			});
 
+		script(type="text/javascript")
+			$('.tooltip-initializer').tooltip();
+
 		include ../includes/analytics
 
 		//- The KeystoneJS Content Editor provides support for ks-editable data attributes,

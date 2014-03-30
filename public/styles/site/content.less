@@ -10,6 +10,12 @@ a {
   background-color: rgba(0,0,0,.5);
   #gradient > .vertical(desaturate(darken(@green, 25%), 70%); desaturate(darken(@green, 30%), 70%));
 
+  a {
+    &:hover {
+      border-bottom: 1px dotted @link-hover-color;
+    }
+  }
+
   @media only screen and (max-width: @screen-xs-max) {
     padding: .5em 1em 1em 1em;
   }
@@ -32,6 +38,12 @@ article {
     }
     p[last-child] {
       margin-bottom: 0;
+    }
+
+    a {
+      &:hover {
+        border-bottom: 1px dotted @link-hover-color;
+      }
     }
   }
 }
@@ -129,11 +141,12 @@ article {
   }
 }
 .faq-item {
-  margin: 0 0 2em 0;
+  margin: 0 0 1em 0;
 
   .question {
     margin: 0;
     font-style: italic;
+    margin: 0 0 .25em 0;
   }
   .answer {
     text-align: left;
