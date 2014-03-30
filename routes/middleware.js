@@ -34,7 +34,10 @@ exports.initLocals = function(req, res, next) {
 
 	locals.user = req.user;
 
+	// Global variables. I really doubt they should go here... <.<
+
 	locals.featuredVideo = 'Mn-biXxp5UA';
+	locals.tagline = 'It ain\'t easy bein\' sleazy!';
 
 	next();
 
