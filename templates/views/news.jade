@@ -61,3 +61,7 @@ block content
 					a(href='/news', class=!data.category ? 'active' : false).list-group-item All Categories
 					each cat in data.categories
 						a(href='/news/' + cat.key, class=data.category && data.category.id == cat.id ? 'active' : false).list-group-item= cat.name
+					if user && user.canAccessKeystone
+						a(href="/keystone/post-categories?new", data-no-instant).list-group-item
+								i.fa.fa-pencil &nbsp;
+								| Create Category
