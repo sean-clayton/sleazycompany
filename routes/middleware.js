@@ -34,6 +34,8 @@ exports.initLocals = function(req, res, next) {
 
 	locals.user = req.user;
 
+	locals.featuredVideo = 'Mn-biXxp5UA';
+
 	next();
 
 };
