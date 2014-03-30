@@ -26,6 +26,10 @@ block content
 					.blog
 						each post in data.posts.results
 							+post(post)
+						if user && user.canAccessKeystone
+							a(href="/keystone/posts?new", data-no-instant).btn.btn-primary.btn-create.full-width
+								i.fa.fa-pencil &nbsp;
+								| Create post
 
 					if data.posts.totalPages > 1
 						ul.pagination
@@ -46,6 +50,10 @@ block content
 							p. There are no posts in the category #{data.category.name}.
 						else
 							p. There are no posts yet.
+					if user && user.canAccessKeystone
+							a(href="/keystone/posts?new", data-no-instant).btn.btn-primary.btn-create.full-width
+								i.fa.fa-pencil &nbsp;
+								| Create post
 
 		if data.categories.length
 			.col-sm-4.col-md-3.no-mobile-padding
