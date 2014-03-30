@@ -135,8 +135,8 @@ html(manifest="sleazycompany.appcache")
 		script(src='/js/instantclick.min.js', data-no-instant)
 		script(data-no-instant).
 			InstantClick.init();
-		script(src="/js/jquery.typewriter.new.js")
-		script(type="text/javascript").
+		script(src="/js/jquery.typewriter.new.js", data-no-instant)
+		script(type="text/javascript", data-no-instant).
 			$('.teletype').typewrite({
 				'delay': 80, //time in ms between each letter
 				'extra_char': '<span class="cursor">&#9613;</span>', //"cursor" character to append after each display
