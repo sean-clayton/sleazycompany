@@ -140,7 +140,7 @@ html(manifest="sleazycompany.appcache")
 		script(type="text/javascript").
 			$('.teletype').typewrite({
 				'delay': 80, //time in ms between each letter
-				'extra_char': '', //"cursor" character to append after each display
+				'extra_char': '<span class="blink cursor">&nbsp;&#9613;</span>', //"cursor" character to append after each display
 				'trim': true, // Trim the string to type (Default: false, does not trim)
 				'callback': null // if exists, called after all effects have finished
 			});
