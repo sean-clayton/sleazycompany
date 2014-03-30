@@ -26,6 +26,7 @@ block content
 						h3
 							span(data-text=data.post.subtitle).teletype
 								= data.post.subtitle
+							span.blink.cursor &nbsp;&#9613;
 
 				if user && user.canAccessKeystone
 					a(href="/keystone/posts/" + data.post.id).edit-button
