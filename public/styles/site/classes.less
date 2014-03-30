@@ -140,11 +140,14 @@
   background: @brand-primary;
   padding: 1em 0;
   box-shadow: 0 3px 0 darken(@brand-primary, 15%);
-  margin: 0 0 2em 0;
 
   &:active {
     position: relative;
     top: 3px;
+  }
+
+  @media only screen and (max-width: @screen-xs-max) {
+    margin: 0 0 2em 0;
   }
 }
 
