@@ -19,13 +19,13 @@ block content
 		article
 			if !data.post
 				header
-					h2 Invalid Post.
+					h1 Invalid Post.
 			else
 				header.jumbotron.post-jumbo
-					h2
+					h1
 						= data.post.title
 					if data.post.subtitle
-						h3
+						p.tagline
 							span(data-text=data.post.subtitle).teletype
 								= data.post.subtitle
 
