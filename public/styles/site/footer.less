@@ -3,7 +3,7 @@
   background: rgba(0,0,0,.25);
   height: @footer-height;
   width: 100%;
-  padding: 1em 0 0 0;
+  padding: 1.5em 0 0 0;
 
   .copyright-info {
     cursor: default;
@@ -13,5 +13,9 @@
     color: #555;
     text-align: center;
     text-shadow: 0 1px 0 black;
+  }
+
+  @media only screen and (max-width: @screen-xs-max) {
+    padding: 1em 0 0 0;
   }
 }
