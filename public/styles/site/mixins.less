@@ -1,0 +1,6 @@
+.download-item-gradient (@color, @a-start, @a-end) {
+  @r: red(@color);
+  @g: green(@color);
+  @b: blue(@color);
+  background-image: linear-gradient(to bottom right, rgba(@r,@g,@b,@a-start), rgba(@r,@g,@b,@a-end)), @noise-bg;
+}
