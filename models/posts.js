@@ -13,7 +13,7 @@ Post.add({
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	author: { type: Types.Relationship, ref: 'User', index: true },
 	twitterCreator: { type: String, note: 'ex. @Username' },
-	twitterDescription: { type: String, required: true, note: 'Should be the same as the brief below' },
+	twitterDescription: { type: String, note: 'Should be the same as the brief below' },
 	publishedDate: { type: Types.Date, index: true },
 	mission: { type: String, index: true, label: 'Mission(s)' },
 	missionDateTime: { type: Date, index: true },
