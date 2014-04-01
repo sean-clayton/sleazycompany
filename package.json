@@ -16,6 +16,7 @@
     "start": "keystone.js"
   },
   "devDependencies": {
-    "forever": "^0.10.11"
+    "forever": "^0.10.11",
+    "gith": "^1.0.4"
   }
 }
