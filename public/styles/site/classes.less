@@ -103,17 +103,19 @@
 
 }
 
-.edit-button {
-  display: block;
+.action-button {
+  display: inline-block;
   width: intrinsic;
   padding: .5em 1em;
-  background: #fff;
-  color: #000;
+  background: @gray-darker;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0,0,0,1);
+  margin: 0 .5em 0 0;
 
   &:hover {
-    text-shadow: 0 1px rgba(0,0,0,1);
-    background: @link-color;
-    color: #fff;
+    background: #fff;
+    color: #000;
+    text-shadow: none;
   }
 }
 

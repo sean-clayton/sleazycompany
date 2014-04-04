@@ -29,8 +29,12 @@ block content
 							span(data-text=data.post.subtitle).teletype
 								= data.post.subtitle
 
+				a(href="https://twitter.com/share" + "?text=" + data.post.title + " " + "http://sleazycompany.com/news/post/" + data.post.slug + "&dnt=true", target="_blank").action-button.popup
+					i.fa.fa-twitter &nbsp;
+					| Tweet
+
 				if user && user.canAccessKeystone
-					a(href="/keystone/posts/" + data.post.id).edit-button
+					a(href="/keystone/posts/" + data.post.id).action-button
 						i.fa.fa-pencil &nbsp;
 						| Edit Post
 
@@ -53,6 +57,15 @@ block content
 							hr
 					section.post-content
 						!= data.post.content.full
-						a(href="https://twitter.com/share", data-via="sleazycompany", data-dnt="true", data-text=data.post.title + " - " + data.post.subtitle).twitter-share-button Tweet
+						a(href="https://twitter.com/share" + "?text=" + data.post.title + " " + "http://sleazycompany.com/news/post/" + data.post.slug + "&dnt=true").twitter-share-button Tweet
 						script.
 							!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+block js
+	script.
+		$(document).ready(function() {
+			$('.popup').click(function() {
+				window.open($(this).attr('href'),'title', 'width=640, height=480');
+					return false;
+				});
+			});
