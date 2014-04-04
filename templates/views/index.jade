@@ -4,7 +4,6 @@ block intro
 	.container: header.jumbotron.home-jumbo
 		h1 Sleazy Company
 		p.tagline
-			= tagline
 
 block content
 	.container
@@ -53,10 +52,18 @@ block content
 						| Follow Us!
 
 block js
-	script(src="/js/jquery.blink.js")
 	script.
-		$(document).ready(function()
-		{
-			$('.blink').blink(); // default is 500ms blink interval.
-			//$('.blink').blink({delay:100}); // causes a 100ms blink interval.
+		var taglines = [
+			'It ain\'t easy bein Sleazy',
+			'Ready. Fire. Aim',
+			'Nos sumus, idcirco perierunt.',
+			'It\'s about to get Sleazy'
+		];
+
+		Array.prototype.randomElement = function() {
+			return this[Math.floor(Math.random() * this.length)];
+		}
+
+		$(document).ready(function() {
+			$('.tagline').text(taglines.randomElement());
 		});
