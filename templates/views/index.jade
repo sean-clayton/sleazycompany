@@ -52,7 +52,7 @@ block content
 						| Follow Us!
 
 block js
-	script.
+	script(type="text/javascript", async).
 		var taglines = [
 			'It ain\'t easy bein Sleazy',
 			'Ready. Fire. Aim',
@@ -64,6 +64,6 @@ block js
 			return this[Math.floor(Math.random() * this.length)];
 		}
 
-		$(document).ready(function() {
+		$(window).ready(function() {
 			$('.tagline').text(taglines.randomElement());
 		});
