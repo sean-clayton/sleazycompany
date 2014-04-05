@@ -7,17 +7,20 @@ block intro
 
 block content
 	.container
-		section.main-content
-			.row
-				.col-lg-8.col-md-6.no-mobile-padding
+		.row
+			.col-md-8.no-mobile-padding
+				section.main-content
 					h3 This is Sleazy Company
-					<p>Originally set up by a gang of Arma 3-loving misfits, Sleazy Company is all about having fun while <a class="tooltip-initializer" data-trigger="hover" data-toggle="tooltip" title="Mostly this">making things go boom</a>. We aim to play the game to maximum levels of enjoyment while keeping our eye on the parameters for victory. As an outfit, we prioritise respect for fellow members, players, and the community. We want to offer people a fun place to play, and a fun group to play with.</p>
-					<p>Whether you are an Arma veteran looking to find a good challenge, or a fresh recruit looking to learn how to play the game, you are welcome to join us. We are always willing to teach those who know less than us, and learn from those who know more.</p>
-					<p>Sleazy Company consists of people who are passionate gamers and we are always experimenting with whatever the community comes up with. From mods and DLC like ALiVE and Bohemia's own Zeus, to community made missions like Patrol Ops and Invade and Annex, all we are looking for is a good time, good people to play with, and that all-important hilarious death.</p>
-					<p>If this sounds like your type of meal (ready-to-eat) then join us, load into the server, find a squad, and lock and load—Because it's about to get Sleazy.</p>
+					p Originally set up by a gang of Arma 3-loving misfits, Sleazy Company is all about having fun while <a class="tooltip-initializer" data-trigger="hover" data-toggle="tooltip" title="Mostly this">making things go boom</a>. We aim to play the game to maximum levels of enjoyment while keeping our eye on the parameters for victory. As an outfit, we prioritise respect for fellow members, players, and the community. We want to offer people a fun place to play, and a fun group to play with.
+					p Whether you are an Arma veteran looking to find a good challenge, or a fresh recruit looking to learn how to play the game, you are welcome to join us. We are always willing to teach those who know less than us, and learn from those who know more.
+					p Sleazy Company consists of people who are passionate gamers and we are always experimenting with whatever the community comes up with. From mods and DLC like ALiVE and Bohemia's own Zeus, to community made missions like Patrol Ops and Invade and Annex, all we are looking for is a good time, good people to play with, and that all-important hilarious death.
+					p If this sounds like your type of meal (ready-to-eat) then join us, load into the server, find a squad, and lock and load—Because it's about to get Sleazy.
+					h3 Featured Video
+					.flex-video.widescreen
+						iframe(src="//www.youtube.com/embed/" + featuredVideo,allowfullscreen="true",frameborder="0")
 
-
-				section.faq.col-lg-4.col-md-6.no-mobile-padding
+			.col-md-4.no-mobile-padding
+				section.faq.main-content
 					h3 FAQs
 					.faq-item
 						h4.question How did you get the name Sleazy Company?
@@ -31,22 +34,13 @@ block content
 					.faq-item
 						h4.question When are your Op Nights?
 						p.answer Currently Mondays and Wednesdays at 7:00PM EST, but be sure to check the latest <a href="/news">intel</a> for up-to-date info on that.
-
-			.row
-				.col-lg-8.col-md-12.no-mobile-padding
-					h3 Featured Video
-					.flex-video.widescreen
-						iframe(src="//www.youtube.com/embed/" + featuredVideo,allowfullscreen="true",frameborder="0")
-
-				.col-lg-4.col-md-6.twitter-widget.visible-lg.no-mobile-padding
+				section.twitter.visible-lg
 					h3
 						a(href='//twitter.com/SleazyCompany') @SleazyCompany
 					a.twitter-timeline(data-dnt="true",href="https://twitter.com/sleazycompany/sleazy-company",height="418px",data-link-color="#09f",data-widget-id="443185826113933312",data-chrome="noheader noborders",data-no-instant)
 					script(async, data-no-instant).
 						!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-				#social-follow.col-sm-12.hidden-lg.no-mobile-padding
-					hr
+				#social-follow.hidden-lg
 					a(href="//twitter.com/sleazycompany").twitter-follow.full-width
 						i.fa.fa-twitter &nbsp;
 						| Follow Us!
