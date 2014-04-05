@@ -62,20 +62,33 @@ html(manifest="sleazycompany.appcache")
 							.collapse.navbar-collapse
 								ul.nav.navbar-nav.navbar-left
 									each link in navLinks
-										li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+										if link.layout == 'left'
+											li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
 								ul.nav.navbar-nav.navbar-right
+									each link in navLinks
+										if link.layout == 'right'
+											li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+									li.dropdown
+										a(href="#", data-toggle="dropdown", data-no-instant).dropdown-toggle
+											| Community
+											b.caret
+										ul.dropdown-menu
+											li: a(href="https://twitter.com/sleazycompany", data-no-instant)
+												| Twitter
+											li: a(href="http://steamcommunity.com/groups/sleazycompany", data-no-instant)
+												| Steam
 									if user
 										li.dropdown
 											a(href="#", data-toggle="dropdown", data-no-instant).dropdown-toggle
-												| Tools
+												| User
 												b.caret
 											ul.dropdown-menu
 												li: a(href="/keystone", data-no-instant)
 													| Control Panel
 												li: a(href='/keystone/signout',data-no-instant)
 													| Sign Out
-									else
-										li: a(href='/keystone/signin',data-no-instant) Sign In
+									//- else
+									//- 	li: a(href='/keystone/signin',data-no-instant) Sign In
 
 			//- BODY
 			#body
@@ -132,9 +145,11 @@ html(manifest="sleazycompany.appcache")
 				s.parentNode.insertBefore(wf, s);
 			})();
 
-		//- script(src='/js/instantclick.min.js', data-no-instant)
-		//- script(data-no-instant).
-		//- 	InstantClick.init();
+		script(src='/js/fastclick.min.js')
+		script.
+			$(function() {
+				FastClick.attach(document.body);
+			});
 		script(src="/js/jquery.typewriter.new.js", data-no-instant)
 		script(type="text/javascript", data-no-instant).
 			$('.teletype').typewrite({

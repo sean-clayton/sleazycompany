@@ -30,6 +30,15 @@
 }
 
 .navbar-default .navbar-nav {
+  li {
+    a {
+      padding: 1em 1.5em;
+
+      @media (max-width: @screen-xs-max) {
+        padding: .5em 1em;
+      }
+    }
+  }
   .active {
     a:hover, a:focus {
       background: @navbar-default-link-active-hover-bg;
